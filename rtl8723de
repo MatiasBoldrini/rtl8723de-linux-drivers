@@ -1,6 +1,6 @@
 #!/bin/bash
 cd
-echo "Descargando ..."
+echo "Downloading ..."
 wget -q https://codeload.github.com/lwfinger/rtlwifi_new/zip/extended  
 sudo apt -y install build-essential
 sudo apt -y install  libelf-dev
@@ -18,4 +18,4 @@ sudo modprobe -r rtl8723de
 sudo modprobe -r rtl8723de && sleep 5 && sudo modprobe rtl8723de ant_sel=2
  sudo modprobe -v rtl8723de ant_sel=2
  echo "options rtl8723de ant_sel=2" | sudo tee /etc/modprobe.d/50-rtl8723de.conf
-echo "Instalado!!"
+echo "Installed!!"
