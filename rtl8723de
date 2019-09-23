@@ -1,0 +1,21 @@
+#!/bin/bash
+cd
+echo "Descargando ..."
+wget -q https://codeload.github.com/lwfinger/rtlwifi_new/zip/extended  
+sudo apt -y install build-essential
+sudo apt -y install  libelf-dev
+sudo apt -y install linux-headers-$(uname-r)
+sudo apt -y install make 
+sudo apt -y install gcc
+echo " Descargado! "
+unzip extended.zip
+unzip extended
+cd rtlwifi_new-extended
+make
+sudo make install
+sudo modprobe -r rtl8723de
+ sudo modprobe rtl8723de 
+sudo modprobe -r rtl8723de && sleep 5 && sudo modprobe rtl8723de ant_sel=2
+ sudo modprobe -v rtl8723de ant_sel=2
+ echo "options rtl8723de ant_sel=2" | sudo tee /etc/modprobe.d/50-rtl8723de.conf
+echo "Instalado!!"
