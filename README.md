@@ -1,4 +1,4 @@
-# !!! DONT INSTALL IF YOUR KERNEL IS LOWER THAN 5.4
+# !!! DONT INSTALL IF YOUR KERNEL IS HIGHER THAN 5.4
 Since 5.4+ kernels includes this driver 
 ## rtl8723de-linux-drivers
 
